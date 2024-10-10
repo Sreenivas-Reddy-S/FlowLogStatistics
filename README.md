@@ -13,7 +13,7 @@ This program is designed to parse flow logs and generate statistics based on a p
 
 # To Run the file, use following commands.
 python3 main.py <flow_logs_file.txt> <lookup_file.csv>
-Here it is : python3 main.py sample_flow_logs.txt sample_lookup_file.csv 
+Here : python3 main.py sample_log_file.txt sample_lookup_file.csv 
 
 ## Output
 The program generates an output file named `output_file.txt` in the same directory. This file contains:
@@ -22,7 +22,7 @@ The program generates an output file named `output_file.txt` in the same directo
 
 ## Testing
 To run the tests, use the following command:
-python -m unittest tests.py
+python3 -m unittest tests.py
 
 The test suite includes:
 1. Testing the loading of the lookup table
