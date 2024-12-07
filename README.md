@@ -56,7 +56,7 @@ The tests cover:
 
 🚀 Getting Started
 
-- 1️⃣ Clone the repo: git clone https://github.com/Sreenivas-Reddy-S/FlowLogStatistics
+- 1️⃣ Clone the repo: git clone https://github.com/Sreenivas-Reddy-S/FlowLogStatistics.git
 - 2️⃣ Run the program following the instructions in README.md and you'll be processing logs like a pro!
 
 💬 Need help? Drop me a message and let’s make this work for you! 😊
