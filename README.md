@@ -1,44 +1,62 @@
-# FlowLogStatistics
-This program is designed to parse flow logs and generate statistics based on a provided lookup table. It processes large log files efficiently and provides counts for tagged and untagged entries.
+🚀 FlowLogStatistics
 
-## Assumptions
-1. Log Format: The program only supports the default VPC flow log format. Custom log formats are not supported.
-2. Version: Only version 2 of the VPC flow log format is supported.
-3. Lookup Table: The lookup table is expected to be in CSV format with columns: dstport, protocol, and tag.
-4. File Size: The program is designed to handle large log files (tested up to 10MB) efficiently.
-5. Protocol Numbers: The program uses a predefined lookup table for protocol numbers to names conversion.
+A super-efficient program that parses VPC flow logs and generates detailed stats based on your lookup table! 🌐💻
 
-## Requirements
-- Python 3.6 or higher
+🌟 Assumptions
 
-# To Run the file, use following commands.
-python3 main.py <flow_logs_file.txt> <lookup_file.csv>
-Here : python3 main.py sample_log_file.txt sample_lookup_file.csv 
+- Log Format: Only supports the default VPC flow log format – custom log formats are not supported yet!
+- Version: We’re all about that VPC flow log version 2!
+- Lookup Table: We expect a CSV format with the following columns: dstport, protocol, and tag.
+- File Size: Handles large log files (up to 10MB) smoothly 🚀.
+- Protocol Numbers: We’ve got a predefined lookup table to convert protocol numbers to names! 🔄
 
-## Output
-The program generates an output file named `output_file.txt` in the same directory. This file contains:
-1. Tag counts
-2. Port and protocol counts for matched entries
+⚙️ Requirements
 
-## Testing
-To run the tests, use the following command:
-python3 -m unittest tests.py
+- Python 3.6+
+- You know the drill – just make sure Python is installed on your system! 🐍
+- 🏃 How to Run : Just hit the command line and run this: python3 main.py sample_log_file.txt sample_lookup_file.csv
+- 🎯 This will process your log file and create an output in the form of output_file.txt!
 
-The test suite includes:
-1. Testing the loading of the lookup table
-2. Parsing of flow logs
-3. Writing output to a file
-4. File validation
-5. Large file processing (up to 10MB)
+📊 Output 
 
-## Code Analysis
-1. Memory Efficiency: The program reads large files in chunks to avoid loading the entire file into memory.
-2. Error Handling: The program includes validation for file existence and non-empty files.
-3. Flexibility: The lookup table allows for easy configuration of port and protocol tagging.
-4. Scalability: The chunked reading approach allows for processing of very large log files.
+- After the program runs, you’ll find an output file called output_file.txt in the same directory. The output includes:
 
-## Limitations and Future Improvements
-1. Currently only supports IPv4 addresses. IPv6 support could be added in the future.
-2. The program doesn't handle multi-threading for parallel processing of large files.
-3. Custom log formats are not supported and could be added for more flexibility.
-4. The output format is fixed. Future versions could support multiple output formats (e.g., CSV, JSON).
+- ✅ Tag Counts: Counts for tagged entries
+- ✅ Port & Protocol Counts: Matched entries broken down by port and protocol
+
+🧪 Testing
+
+Want to make sure it’s working like a charm? Run the test suite:
+
+- python3 -m unittest tests.py
+
+The tests cover:
+
+- 🔄 Loading the lookup table
+- 📝 Parsing flow logs
+- 📂 Writing output to a file
+- ✅ File validation
+- 🚀 Large file processing (up to 10MB)
+
+🧑‍💻 Code Analysis
+
+- Memory Efficiency: We read the log files in chunks to save memory 🧠💾.
+- Error Handling: File validation is built-in – no worries about missing or empty files!
+- Flexibility: The lookup table makes it easy to configure port and protocol tagging 📊🔧.
+- Scalability: The chunk reading method means the program scales easily for large files.
+
+🚧 Limitations & Future Ideas
+
+- IPv6 Support: Right now, we’re sticking to IPv4, but IPv6 support could be coming soon! 🌍
+- Multi-threading: No parallel processing just yet – could be added for speed improvements.
+- Custom Log Formats: Currently, we only support default VPC logs – let’s add more formats in the future!
+- Output Flexibility: Right now, we’re using fixed output format. We could definitely add CSV/JSON options next! 🔄
+
+✨ Ready to go? Clone the repo and let’s get parsing!
+
+🚀 Getting Started
+
+- 1️⃣ Clone the repo: git clone https://github.com/Sreenivas-Reddy-S/FlowLogStatistics
+- 2️⃣ Run the program following the instructions in README.md and you'll be processing logs like a pro!
+
+💬 Need help? Drop me a message and let’s make this work for you! 😊
